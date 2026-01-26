@@ -1,0 +1,12 @@
+{
+	"name": "rawstyle-eslint",
+	"version": "0.0.0",
+	"author": "kh4f <kh4f.dev@gmail.com>",
+	"license": "MIT",
+	"repository": "https://github.com/rawstylecss/rawstyle-eslint",
+	"bugs": "https://github.com/rawstylecss/rawstyle-eslint/issues",
+	"homepage": "https://github.com/rawstylecss/rawstyle-eslint#readme",
+	"keywords": ["rawstyle", "rawstyle-eslint", "css-in-js"],
+	"type": "module",
+	"main": "dist/index.js"
+}
