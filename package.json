@@ -9,6 +9,7 @@
 	"homepage": "https://github.com/rawstylecss/rawstyle-eslint#readme",
 	"keywords": ["rawstyle", "rawstyle-eslint", "css-in-js"],
 	"pnpm": { "onlyBuiltDependencies": ["esbuild"] },
+	"files": ["dist"],
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
