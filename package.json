@@ -11,9 +11,17 @@
 	"pnpm": { "onlyBuiltDependencies": ["esbuild"] },
 	"type": "module",
 	"main": "dist/index.js",
+	"scripts": {
+		"lint": "eslint"
+	},
 	"devDependencies": {
+		"@eslint/js": "^9.39.2",
+		"@stylistic/eslint-plugin": "^5.7.1",
 		"@types/node": "^25.1.0",
+		"eslint": "^9.39.2",
+		"jiti": "^2.6.1",
 		"tsx": "^4.21.0",
-		"typescript": "^5.9.3"
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.54.0"
 	}
 }
