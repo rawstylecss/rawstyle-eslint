@@ -8,6 +8,12 @@
 	"bugs": "https://github.com/rawstylecss/rawstyle-eslint/issues",
 	"homepage": "https://github.com/rawstylecss/rawstyle-eslint#readme",
 	"keywords": ["rawstyle", "rawstyle-eslint", "css-in-js"],
+	"pnpm": { "onlyBuiltDependencies": ["esbuild"] },
 	"type": "module",
-	"main": "dist/index.js"
+	"main": "dist/index.js",
+	"devDependencies": {
+		"@types/node": "^25.1.0",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3"
+	}
 }
