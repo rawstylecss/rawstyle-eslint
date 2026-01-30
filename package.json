@@ -7,7 +7,7 @@
 	"repository": "https://github.com/rawstylecss/rawstyle-eslint",
 	"bugs": "https://github.com/rawstylecss/rawstyle-eslint/issues",
 	"homepage": "https://github.com/rawstylecss/rawstyle-eslint#readme",
-	"keywords": ["rawstyle", "rawstyle-eslint", "css-in-js"],
+	"keywords": ["rawstyle", "rawstyle-eslint", "css-in-js", "eslint", "eslint-plugin"],
 	"pnpm": { "onlyBuiltDependencies": ["esbuild"] },
 	"files": ["dist"],
 	"type": "module",
