@@ -1,3 +1,3 @@
 # Rawstyle ESLint Plugin
 
-This ESLint plugin offers linting support for Rawstyle, a CSS-in-JS library.
+An ESLint plugin that provides CSS formatting with autofix support for Rawstyle CSS templates and vanilla CSS files.
