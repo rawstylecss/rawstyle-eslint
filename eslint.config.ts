@@ -2,6 +2,7 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
+import rawstyle from './src/index'
 
 export default defineConfig([
 	globalIgnores(['dist'], 'Global Ignores'),
@@ -19,6 +20,19 @@ export default defineConfig([
 			'@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: true }],
 			'@typescript-eslint/restrict-template-expressions': 'off',
 		},
+	},
+	{
+		name: 'Rawstyle Rules',
+		files: ['**/*.ts?(x)'],
+		plugins: { rawstyle },
+		rules: { 'rawstyle/indent': 'error' },
+	},
+	{
+		name: 'CSS Rules',
+		files: ['**/*.css'],
+		plugins: { rawstyle },
+		language: 'rawstyle/css',
+		rules: { 'rawstyle/indent': 'error' },
 	},
 	{
 		name: 'Stylistic Rules',
