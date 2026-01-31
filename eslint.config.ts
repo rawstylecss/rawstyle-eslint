@@ -24,15 +24,13 @@ export default defineConfig([
 	{
 		name: 'Rawstyle Rules',
 		files: ['**/*.ts?(x)'],
-		plugins: { rawstyle },
-		rules: { 'rawstyle/indent': 'error' },
+		extends: [rawstyle.configs.recommended],
 	},
 	{
 		name: 'CSS Rules',
 		files: ['**/*.css'],
-		plugins: { rawstyle },
 		language: 'rawstyle/css',
-		rules: { 'rawstyle/indent': 'error' },
+		extends: [rawstyle.configs.recommended],
 	},
 	{
 		name: 'Stylistic Rules',
