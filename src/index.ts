@@ -8,4 +8,13 @@ const plugin: Plugin = {
 	rules: { indent },
 }
 
+plugin.configs = {
+	recommended: {
+		plugins: { rawstyle: plugin },
+		rules: {
+			'rawstyle/indent': 'error',
+		},
+	},
+}
+
 export default plugin
