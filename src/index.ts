@@ -1,6 +1,7 @@
-import type { Plugin } from '@eslint/core'
 import { css } from './css-lang'
 import { indent } from './rules'
+import type { Plugin } from '@eslint/core'
+import type { RawstyleEslintPlugin } from '@/types'
 
 const plugin: Plugin = {
 	meta: { name: 'rawstyle-eslint', version: '0.0.0' },
@@ -17,4 +18,4 @@ plugin.configs = {
 	},
 }
 
-export default plugin
+export default plugin as RawstyleEslintPlugin
