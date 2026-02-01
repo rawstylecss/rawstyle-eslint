@@ -22,13 +22,7 @@ export const noTrailingWhitespace: RuleDefinition = {
 	},
 }
 
-const report = (
-	source: string,
-	context: RuleContext,
-	lineOffset = 0,
-	columnOffset = 0,
-	charOffset = 0,
-) => {
+const report = (source: string, context: RuleContext, lineOffset = 0, columnOffset = 0, charOffset = 0) => {
 	for (const match of source.matchAll(/^.*?([ \t]+)$/gm)) {
 		const [fullLine, trailingWs] = [match[0], match[1]]
 		const lineNum = source.slice(0, match.index).split('\n').length

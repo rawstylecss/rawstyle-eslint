@@ -22,13 +22,7 @@ export const indent: RuleDefinition = {
 	},
 }
 
-const report = (
-	source: string,
-	context: RuleContext,
-	lineOffset = 0,
-	charOffset = 0,
-	initLevel = 0,
-) => {
+const report = (source: string, context: RuleContext, lineOffset = 0, charOffset = 0, initLevel = 0) => {
 	const indentStyle = '\t'
 	let level = initLevel
 
