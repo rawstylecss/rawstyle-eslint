@@ -37,17 +37,17 @@ void gcss`
 		overflow: hidden;
 		margin: 0;
 		cursor: crosshair;
-		
+
 		&.dark {
 			--background: #303030;
 			--foreground: #ebebeb;
 		}
-		
+
 		main {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			
+
 			&:hover {
 				cursor: default;
 			}
