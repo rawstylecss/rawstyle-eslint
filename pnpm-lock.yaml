@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@eslint/core':
-        specifier: '>=1.1'
+        specifier: '*'
         version: 1.1.0
     devDependencies:
       '@eslint/js':
