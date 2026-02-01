@@ -25,9 +25,7 @@ jobs:
         with: { node-version: latest, cache: pnpm, registry-url: https://registry.npmjs.org }
 
       - name: Set env variables
-        run: |
-          ZIP=${GITHUB_REPOSITORY#*/}-$TAG.zip
-          echo -e ZIP=$ZIP >> $GITHUB_ENV
+        run: echo -e ZIP=ZIP=${GITHUB_REPOSITORY#*/}-$TAG.zip >> $GITHUB_ENV
 
       - name: Install deps
         run: pnpm install
