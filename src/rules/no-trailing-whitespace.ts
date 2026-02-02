@@ -1,4 +1,5 @@
 import type { RuleContext, RuleDefinition } from '@eslint/core'
+import { TEMPLATE_PATTERN } from 'rawstyle'
 
 export const noTrailingWhitespace: RuleDefinition = {
 	meta: { fixable: 'code' },
@@ -9,8 +10,7 @@ export const noTrailingWhitespace: RuleDefinition = {
 		if (context.filename.endsWith('.css')) {
 			report(source, context, 0, 1)
 		} else {
-			const regex = /\bg?css`(.*?)`/gs
-			for (const match of source.matchAll(regex)) {
+			for (const match of source.matchAll(TEMPLATE_PATTERN)) {
 				const charOffset = source.indexOf('`', match.index) + 1
 				const lineOffset = source.slice(0, charOffset).split('\n').length - 1
 				report(match[1], context, lineOffset, 0, charOffset)
