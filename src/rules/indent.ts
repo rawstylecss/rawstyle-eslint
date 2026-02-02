@@ -47,7 +47,7 @@ const report = (source: string, context: RuleContext, lineOffset = 0, charOffset
 			context.report({
 				message: `Incorrect indentation`,
 				loc: {
-					start: { line: lineOffset + i, column: initLevel },
+					start: { line: lineOffset + i, column: 0 },
 					end: { line: lineOffset + i, column: actualIndent.length + 1 - initLevel },
 				},
 				fix: fixer => fixer.replaceTextRange(
