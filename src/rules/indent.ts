@@ -1,28 +1,8 @@
-import { TEMPLATE_PATTERN } from 'rawstyle'
-import type { RuleContext, RuleDefinition } from '@eslint/core'
+import { createRule } from '../utils'
 
-export const indent: RuleDefinition = {
-	meta: { fixable: 'code' },
-	create(context) {
-		if (!('text' in context.sourceCode)) return {}
-		const source = context.sourceCode.text
-
-		if (context.filename.endsWith('.css')) {
-			report(source, context)
-		} else {
-			for (const match of source.matchAll(TEMPLATE_PATTERN)) {
-				const charOffset = source.indexOf('`', match.index) + 1
-				const lineOffset = source.slice(0, charOffset).split('\n').length - 1
-				report(match[1], context, lineOffset, charOffset, 1)
-			}
-		}
-
-		return {}
-	},
-}
-
-const report = (source: string, context: RuleContext, lineOffset = 0, charOffset = 0, initLevel = 0) => {
+export const indent = createRule((source, context, { lineOffset, charOffset, isTemplate }) => {
 	const indentStyle = '\t'
+	const initLevel = isTemplate ? 1 : 0
 	let level = initLevel
 
 	const lines = source.split('\n')
@@ -63,4 +43,4 @@ const report = (source: string, context: RuleContext, lineOffset = 0, charOffset
 		level = Math.max(initLevel, level)
 		charOffset += line.length + 1
 	}
-}
+})

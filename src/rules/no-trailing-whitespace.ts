@@ -1,27 +1,8 @@
-import { TEMPLATE_PATTERN } from 'rawstyle'
-import type { RuleContext, RuleDefinition } from '@eslint/core'
+import { createRule } from '../utils'
 
-export const noTrailingWhitespace: RuleDefinition = {
-	meta: { fixable: 'code' },
-	create(context) {
-		if (!('text' in context.sourceCode)) return {}
-		const source = context.sourceCode.text
+export const noTrailingWhitespace = createRule((source, context, { lineOffset, charOffset, isTemplate }) => {
+	const columnOffset = isTemplate ? 0 : 1
 
-		if (context.filename.endsWith('.css')) {
-			report(source, context, 0, 1)
-		} else {
-			for (const match of source.matchAll(TEMPLATE_PATTERN)) {
-				const charOffset = source.indexOf('`', match.index) + 1
-				const lineOffset = source.slice(0, charOffset).split('\n').length - 1
-				report(match[1], context, lineOffset, 0, charOffset)
-			}
-		}
-
-		return {}
-	},
-}
-
-const report = (source: string, context: RuleContext, lineOffset = 0, columnOffset = 0, charOffset = 0) => {
 	for (const match of source.matchAll(/^.*?([ \t]+)$/gm)) {
 		const [fullLine, trailingWs] = [match[0], match[1]]
 		const lineNum = source.slice(0, match.index).split('\n').length
@@ -40,4 +21,4 @@ const report = (source: string, context: RuleContext, lineOffset = 0, columnOffs
 			]),
 		})
 	}
-}
+})
