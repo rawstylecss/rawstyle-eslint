@@ -31,8 +31,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       relion:
-        specifier: ^0.37.0
-        version: 0.37.0
+        specifier: ^0.38.0
+        version: 0.38.0
       tsdown:
         specifier: ^0.20.1
         version: 0.20.1(typescript@5.9.3)
@@ -941,8 +941,8 @@ packages:
   rawstyle@0.2.0:
     resolution: {integrity: sha512-/8B1Ln3qTX5nw7p+ujbuVplO+1sbPHMHhOaCjpMcH/JJwma7bDIW7FvBkb+g1nom1jauFc+if1wMPqiIh5glPA==}
 
-  relion@0.37.0:
-    resolution: {integrity: sha512-oP9dXE+4s07qhrfAT6c8FQ33F9c7t5QGMufSvfa9heRz6H+b3kwQZVFuteGiDKDqqZvGSPPTvBU2+Aw2tHXoMg==}
+  relion@0.38.0:
+    resolution: {integrity: sha512-8oagLJD0OwDa8G0P7UbbFNR1lCVI0PJWOHWWP4xTD1MxsgX04SaP/DC9DG1DXUrST3RMW4arXNnMSi/rGSKPwA==}
     hasBin: true
 
   resolve-from@4.0.0:
@@ -1867,7 +1867,7 @@ snapshots:
       '@oxc-parser/binding-wasm32-wasi': 0.110.0
       oxc-parser: 0.110.0
 
-  relion@0.37.0:
+  relion@0.38.0:
     dependencies:
       semver: 7.7.3
 
