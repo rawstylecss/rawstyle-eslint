@@ -1,5 +1,5 @@
-import type { RuleContext, RuleDefinition } from '@eslint/core'
 import { TEMPLATE_PATTERN } from 'rawstyle'
+import type { RuleContext, RuleDefinition } from '@eslint/core'
 
 export const indent: RuleDefinition = {
 	meta: { fixable: 'code' },
