@@ -21,10 +21,8 @@
 		"lint": "eslint",
 		"release": "relion"
 	},
-	"dependencies": {
-		"rawstyle": "^0.4.0"
-	},
 	"peerDependencies": {
+		"rawstyle": ">=0.4",
 		"@eslint/core": "*"
 	},
 	"devDependencies": {
