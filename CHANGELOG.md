@@ -1,6 +1,14 @@
 # Changelog
 
 
+## &ensp; [` 📦 v0.1.1  `](https://github.com/rawstylecss/rawstyle-eslint/compare/v0.1.0...v0.1.1)
+
+### &emsp; 📚 Documentation
+- **Documentation & branding**: introduced a README with features overview, setup instructions, rules table, and included logo and demo images. [🡥](https://github.com/rawstylecss/rawstyle-eslint/commit/386eeff)
+
+##### &emsp;&emsp; [_Full Changelog_](https://github.com/rawstylecss/rawstyle-eslint/compare/v0.1.0...v0.1.1) &ensp;•&ensp; _Feb 8, 2026_
+
+
 ## &ensp; [` 📦 v0.1.0  `](https://github.com/rawstylecss/rawstyle-eslint/commits/v0.1.0)
 
 ### &emsp; 🎁 Features

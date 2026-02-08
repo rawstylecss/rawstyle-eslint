@@ -4,7 +4,7 @@ import type { Plugin } from '@eslint/core'
 import type { RawstyleEslintPlugin } from '@/types'
 
 const plugin: Plugin = {
-	meta: { name: 'rawstyle-eslint', version: '0.1.0' },
+	meta: { name: 'rawstyle-eslint', version: '0.1.1' },
 	languages: { css },
 	rules: {
 		indent,
