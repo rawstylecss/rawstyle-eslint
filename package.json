@@ -28,7 +28,7 @@
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@stylistic/eslint-plugin": "^5.7.1",
-		"@types/node": "^25.2.0",
+		"@types/node": "^25.2.2",
 		"eslint": "^9.39.2",
 		"jiti": "^2.6.1",
 		"relion": "^0.38.0",
