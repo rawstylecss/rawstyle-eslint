@@ -12,7 +12,7 @@ importers:
         specifier: '*'
         version: 1.1.0
       rawstyle:
-        specifier: '>=0.4.1'
+        specifier: '>=0.4.2'
         version: 0.4.2
     devDependencies:
       '@eslint/js':

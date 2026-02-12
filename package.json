@@ -22,7 +22,7 @@
 		"release": "relion"
 	},
 	"peerDependencies": {
-		"rawstyle": ">=0.4.1",
+		"rawstyle": ">=0.4.2",
 		"@eslint/core": "*"
 	},
 	"devDependencies": {
