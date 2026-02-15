@@ -27,7 +27,6 @@ export const createRule = (
 
 				const startLine = source.lastIndexOf('\n', charOffset - 1) + 1
 				const indent = ((/^\s*/.exec(source.slice(startLine, charOffset)))?.[0].length ?? 0) + 1
-				console.log(`Found template at line ${lineOffset + 1}, char ${charOffset + 1}, indent ${indent}`)
 
 				report(match[1], context, { lineOffset, charOffset, initLevel: indent, isTemplate: true })
 			}
