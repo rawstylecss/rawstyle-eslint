@@ -3,7 +3,7 @@ import type { Language } from '@eslint/core'
 export const css: Language = {
 	fileType: 'text',
 	lineStart: 1,
-	columnStart: 1,
+	columnStart: 0,
 	nodeTypeKey: 'type',
 	visitorKeys: {},
 	validateLanguageOptions: () => undefined,

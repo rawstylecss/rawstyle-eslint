@@ -27,7 +27,7 @@ export const indent = createRule((source, context, { lineOffset, charOffset, ini
 				message: `Incorrect indentation`,
 				loc: {
 					start: { line: lineOffset + i, column: 0 },
-					end: { line: lineOffset + i, column: actualIndent.length + 1 - initLevel },
+					end: { line: lineOffset + i, column: actualIndent.length },
 				},
 				fix: fixer => fixer.replaceTextRange(
 					[charOffset, charOffset + actualIndent.length],

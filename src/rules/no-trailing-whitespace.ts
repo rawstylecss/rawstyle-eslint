@@ -1,8 +1,6 @@
 import { createRule } from '../utils'
 
 export const noTrailingWhitespace = createRule((source, context, { lineOffset, charOffset, isTemplate }) => {
-	const columnOffset = isTemplate ? 0 : 1
-
 	for (const match of source.matchAll(/^(?!\/\/).*?([ \t]+)$/gm)) {
 		const [fullLine, trailingWs] = [match[0], match[1]]
 
@@ -15,8 +13,8 @@ export const noTrailingWhitespace = createRule((source, context, { lineOffset, c
 		context.report({
 			message: `Trailing whitespace`,
 			loc: {
-				start: { line: lineNum + lineOffset, column: wsStartColumn + columnOffset },
-				end: { line: lineNum + lineOffset, column: wsEndColumn + columnOffset },
+				start: { line: lineNum + lineOffset, column: wsStartColumn },
+				end: { line: lineNum + lineOffset, column: wsEndColumn },
 			},
 			fix: fixer => fixer.removeRange([
 				charOffset + match.index + wsStartColumn,
