@@ -12,7 +12,7 @@ export const indent = createRule((source, context, { lineOffset, charOffset, isT
 		const line = lines[i - 1]
 		const trimmed = line.trim()
 
-		if (!trimmed) {
+		if (!trimmed || trimmed.startsWith('//')) {
 			charOffset += line.length + 1
 			continue
 		}

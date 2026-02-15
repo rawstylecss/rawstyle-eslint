@@ -3,7 +3,7 @@ import { createRule } from '../utils'
 export const noTrailingWhitespace = createRule((source, context, { lineOffset, charOffset, isTemplate }) => {
 	const columnOffset = isTemplate ? 0 : 1
 
-	for (const match of source.matchAll(/^.*?([ \t]+)$/gm)) {
+	for (const match of source.matchAll(/^(?!\/\/).*?([ \t]+)$/gm)) {
 		const [fullLine, trailingWs] = [match[0], match[1]]
 		const lineNum = source.slice(0, match.index).split('\n').length
 		const wsStartColumn = fullLine.length - trailingWs.length
