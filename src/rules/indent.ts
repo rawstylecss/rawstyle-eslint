@@ -1,8 +1,7 @@
 import { createRule } from '../utils'
 
-export const indent = createRule((source, context, { lineOffset, charOffset, isTemplate }) => {
+export const indent = createRule((source, context, { lineOffset, charOffset, initLevel }) => {
 	const indentStyle = '\t'
-	const initLevel = isTemplate ? 1 : 0
 	let level = initLevel
 
 	const lines = source.split('\n')
