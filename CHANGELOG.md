@@ -1,6 +1,16 @@
 # Changelog
 
 
+## &ensp; [` 📦 0.1.2  `](https://github.com/rawstylecss/rawstyle-eslint/compare/v0.1.1...v0.1.2)
+
+### &emsp; 🩹 Fixes
+- **Corrected template indentation**: indentation checks now properly validate the closing backtick in template literals, accounting for scope. [🡥](https://github.com/rawstylecss/rawstyle-eslint/commit/8557ffd) [🡥](https://github.com/rawstylecss/rawstyle-eslint/commit/ee11095)
+- **Ignored false positives**: empty lines and trailing whitespace on the last line of templates are now correctly ignored. [🡥](https://github.com/rawstylecss/rawstyle-eslint/commit/55827fc)
+- **Skipped comment validation**: removed incorrect linting errors for indentation and whitespace within comments. [🡥](https://github.com/rawstylecss/rawstyle-eslint/commit/091e72c)
+
+##### &emsp;&emsp; [Full Changelog](https://github.com/rawstylecss/rawstyle-eslint/compare/v0.1.1...v0.1.2) &ensp;•&ensp; Feb 15, 2026
+
+
 ## &ensp; [` 📦 v0.1.1  `](https://github.com/rawstylecss/rawstyle-eslint/compare/v0.1.0...v0.1.1)
 
 ### &emsp; 📚 Documentation
