@@ -1,6 +1,6 @@
 import { createRule } from '../utils'
 
-export const indent = createRule((source, context, { lineOffset, charOffset, initLevel }) => {
+export const indent = createRule((source, context, { lineOffset, charOffset, initLevel, isTemplate }) => {
 	const indentStyle = '\t'
 	let level = initLevel
 
@@ -11,13 +11,14 @@ export const indent = createRule((source, context, { lineOffset, charOffset, ini
 		const line = lines[i - 1]
 		const trimmed = line.trim()
 
-		if (!trimmed || trimmed.startsWith('//')) {
+		if ((!trimmed && (!isTemplate || i !== lines.length)) || trimmed.startsWith('//')) {
 			charOffset += line.length + 1
 			continue
 		}
 
 		let expectedLevel = level
 		if (trimmed.startsWith('}')) expectedLevel = Math.max(initLevel, level - 1)
+		if (isTemplate && i === lines.length) expectedLevel = initLevel - 1
 
 		const expectedIndent = indentStyle.repeat(expectedLevel)
 		const actualIndent = (/^\s*/.exec(line))?.[0] ?? ''
