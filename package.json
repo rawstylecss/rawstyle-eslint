@@ -29,7 +29,7 @@
 		"@eslint/js": "^10.0.1",
 		"@stylistic/eslint-plugin": "^5.8.0",
 		"@types/node": "^25.2.3",
-		"eslint": "^9.39.2",
+		"eslint": "^10.0.0",
 		"jiti": "^2.6.1",
 		"relion": "^0.39.1",
 		"tsdown": "^0.20.3",
