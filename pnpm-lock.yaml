@@ -12,8 +12,8 @@ importers:
         specifier: '*'
         version: 1.1.0
       rawstyle:
-        specifier: '>=0.4.2'
-        version: 0.4.2
+        specifier: '>=0.5.0'
+        version: 0.5.0
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -951,8 +951,8 @@ packages:
   quansync@1.0.0:
     resolution: {integrity: sha512-5xZacEEufv3HSTPQuchrvV6soaiACMFnq1H8wkVioctoH3TRha9Sz66lOxRwPK/qZj7HPiSveih9yAyh98gvqA==}
 
-  rawstyle@0.4.2:
-    resolution: {integrity: sha512-dbKRDelYgCMAx6dBfuIwqHN77rmlkD/cPPs8Yct3rxwwIoeL33z79kftpr5UNaP4LAhB9EsGRniJxRZ1QknPaQ==}
+  rawstyle@0.5.0:
+    resolution: {integrity: sha512-LVZxGFt+KEP2P3IEMGaRfuJdAyGfl9e/4Ai1TGKvFOIVdFc6lW7dN2oIZbNTuFyN/p4bJbjxyD1QF45Misf3ng==}
 
   relion@0.39.1:
     resolution: {integrity: sha512-Se1XgUsPolCExkba4qk1O/EC2iKoTLMqVNmsMzWEdijEfwNZ7lSgGrbd/jz6M7AJn7yXqUp4fHYCwvCLwZuzTA==}
@@ -1886,7 +1886,7 @@ snapshots:
 
   quansync@1.0.0: {}
 
-  rawstyle@0.4.2:
+  rawstyle@0.5.0:
     dependencies:
       '@oxc-parser/binding-wasm32-wasi': 0.112.0
       oxc-parser: 0.112.0
